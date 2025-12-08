@@ -1,10 +1,10 @@
-
 // Castings
 
 // Castings em Java convertem um valor de um tipo para outro quando essa
 // conversão é possível, podendo ocorrer perda de informação.
 
 // ex double, para int como no exemplo abaixo
+package org.example;
 
 public class Castings {
   public static void main(String[] args) {
