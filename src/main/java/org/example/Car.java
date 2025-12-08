@@ -27,11 +27,11 @@ public class Car {
 
   }
 
-  public void vrumvrum() {
+  private void vrumvrum() {
     System.out.println(this.model + " made vrum vrum!");
   }
 
-  public void carInfo() {
+  protected void carInfo() {
     System.out.println("Model: " + this.model);
     System.out.println("Year: " + this.year);
     System.out.println("Manufacture: " + this.manufacture + "\n");
