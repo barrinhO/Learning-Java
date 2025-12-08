@@ -3,10 +3,6 @@ import java.util.ArrayList;
 // preciso nem falar nada ne aldkjaihfaskhfj
 // basicamente if else, else if, else omai sheila
 
-import com.sun.jdi.ArrayReference;
-
-import javax.naming.PartialResultException;
-
 public class Condicionais {
     public static void main(String[] args) {
 
