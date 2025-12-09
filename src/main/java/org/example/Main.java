@@ -1,14 +1,22 @@
 package org.example;
+import interfaces.Carro;
+import interfaces.Civic;
+import interfaces.Mobi;
 
 public class Main {
   public static void main(String[] args) {
+      // interface Carro
 
-      System.out.println("Hello");
-      Car carro = new Car("Corolla", 2199, "roblox");
-      carro.carInfo();
-      /*carro.vrumvrum();
-      * aqui por exemplo não é acessível pq o método ta privado*/
+      Carro meuCarro = new Civic();
+      Carro meuCarro2 = new Mobi();
 
+      meuCarro.acelerar();
+      meuCarro.frear();
+      meuCarro.parar();
+
+      meuCarro2.acelerar();
+      meuCarro2.frear();
+      meuCarro2.parar();
   }
 
 }

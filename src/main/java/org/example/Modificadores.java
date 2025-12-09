@@ -24,6 +24,8 @@ public class Modificadores {
      public void chamarCarro(){
         Car carro1 = new Car("Robilox",1990, "talvez");
         carro1.carInfo();
+/*
         carro1.vrumvrum();
+*/
     }
 }
