@@ -1,30 +1,21 @@
 package org.example;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) {
 
     Scanner scan = new Scanner(System.in);
-    ArrayList<Integer> numbers = new ArrayList<>();
 
-    System.out.println("\nDigite 5 números: ");
-    while(numbers.size() != 5){
-      int typedNumber = scan.nextInt();
-      numbers.add(typedNumber);
+    System.out.println("\nDigite um número: ");
+    int number = scan.nextInt();
+
+    // se o resto da divisão por 2 for 0
+    if(number % 2 == 0){
+      System.out.println("Número par");
     }
-
-    int maiorNumero = numbers.get(0);
-
-    for(int num : numbers){
-
-      if(num > maiorNumero){
-        maiorNumero = num;
-      }
-
+    else{
+      System.out.println("Número ímpar");
     }
-
-    System.out.println("Maior número: " + maiorNumero);
 
   }
 }
