@@ -1,35 +1,17 @@
 package org.example;
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
 
-    String word = "PneuMoutraMicroscopicoSsilicoVulcanoConiotico";
-    ArrayList<Character> vogais = new ArrayList<>();
-    ArrayList<Character> vogaisEncontradas = new ArrayList<>();
+    Scanner scan = new Scanner(System.in);
 
-    vogais.add('a');
-    vogais.add('e');
-    vogais.add('i');
-    vogais.add('o');
-    vogais.add('u');
+    System.out.println("Digite um número pra visualizar sua tabuada de 0 a 10: ");
+    int numero = scan.nextInt();
 
-    int countVogal = 0;
-
-    for (int i = 0; i < word.length(); i++) {
-      char letter = Character.toLowerCase(word.charAt(i));
-
-      for (char vogal : vogais) {
-        if (letter == vogal) {
-
-          if (!vogaisEncontradas.contains(letter)) {
-            vogaisEncontradas.add(letter);
-            countVogal++;
-          }
-        }
-      }
+    for(int i = 0; i <= 10; i++){
+      int result = numero * i;
+      System.out.printf("%d x %d = %d%n", numero, i, result);
     }
-
-    System.out.println("A palavra: " + word + "\nContém: " + countVogal + " vogais únicas");
   }
 }
