@@ -1,21 +1,35 @@
 package org.example;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
   public static void main(String[] args) {
 
-    Scanner scan = new Scanner(System.in);
+    String word = "PneuMoutraMicroscopicoSsilicoVulcanoConiotico";
+    ArrayList<Character> vogais = new ArrayList<>();
+    ArrayList<Character> vogaisEncontradas = new ArrayList<>();
 
-    System.out.println("\nDigite um número: ");
-    int number = scan.nextInt();
+    vogais.add('a');
+    vogais.add('e');
+    vogais.add('i');
+    vogais.add('o');
+    vogais.add('u');
 
-    // se o resto da divisão por 2 for 0
-    if(number % 2 == 0){
-      System.out.println("Número par");
+    int countVogal = 0;
+
+    for (int i = 0; i < word.length(); i++) {
+      char letter = Character.toLowerCase(word.charAt(i));
+
+      for (char vogal : vogais) {
+        if (letter == vogal) {
+
+          if (!vogaisEncontradas.contains(letter)) {
+            vogaisEncontradas.add(letter);
+            countVogal++;
+          }
+        }
+      }
     }
-    else{
-      System.out.println("Número ímpar");
-    }
 
+    System.out.println("A palavra: " + word + "\nContém: " + countVogal + " vogais únicas");
   }
 }
