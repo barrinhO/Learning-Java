@@ -1,17 +1,44 @@
 package org.example;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-
     Scanner scan = new Scanner(System.in);
+    ArrayList<Float> notas = new ArrayList<>();
 
-    System.out.println("Digite um número pra visualizar sua tabuada de 0 a 10: ");
-    int numero = scan.nextInt();
 
-    for(int i = 0; i <= 10; i++){
-      int result = numero * i;
-      System.out.printf("%d x %d = %d%n", numero, i, result);
+    System.out.println("Quantas notas são?\n");
+    int qtdNotas = scan.nextInt();
+
+    System.out.println("Qual a é a media?\n");
+    float mediaEscolar = scan.nextFloat();
+
+    System.out.println("Digite as " + qtdNotas + " notas\n");
+
+    for(int i = 1; i <= qtdNotas; i++){
+      float typedNota = scan.nextFloat();
+      System.out.println("Nota"+ i + ": " + typedNota);
+      notas.add(typedNota);
     }
+
+    float total = 0;
+
+    for(float notaLista : notas){
+      total += notaLista;
+    }
+
+    float mediaFinal = total / qtdNotas;
+
+    System.out.println("\nTotal de pontos: " + total);
+    System.out.println("Média: " + total/qtdNotas + "\n");
+
+    if(mediaFinal >= mediaEscolar){
+      System.out.println("Você foi aprovado!");
+    }
+    else{
+      System.out.println("Reprovado");
+    }
+
   }
 }
