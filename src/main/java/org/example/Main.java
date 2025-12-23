@@ -1,21 +1,34 @@
 package org.example;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Main {
   public static void main(String[] args) {
-    // inverter uma palavra
 
-    String word = "Java";
-    String reverseString = "";
+    Random rand = new Random();
+    Scanner scan = new Scanner(System.in);
 
-    // stringbuilder tb pode ser usado
-    StringBuilder sb = new StringBuilder();
+    int number = rand.nextInt(10) + 1;
 
-    for(int i = word.length() - 1; i >= 0; i--){
-      reverseString = reverseString + word.charAt(i);
-      sb.append(word.charAt(i));
+    int tentativas = 3;
+
+    while (tentativas > 0) {
+      System.out.println("Digite o número:");
+      int typedNumber = scan.nextInt();
+
+      if (typedNumber == number) {
+        System.out.println("Você acertou! O número era: " + number);
+        break;
+      } else {
+        tentativas--;
+        System.out.println("Errou! Restam " + tentativas + " tentativas");
+      }
+    }
+
+    if (tentativas == 0) {
+      System.out.println("Fim de jogo! O número era: " + number);
+    }
 
     }
-    System.out.println(reverseString);
-    System.out.println(sb.toString());
   }
-}
