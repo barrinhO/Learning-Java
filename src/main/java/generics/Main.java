@@ -16,7 +16,6 @@ public class Main {
         // SET: NÃO aceita elementos duplicados e NÃO garante ordem
         Set<String> setStrings = new HashSet<>();
         setStrings.add("Chris");
-        setStrings.add("Bárbara");
         setStrings.add("Bárbara"); // duplicado, será ignorado
 
         System.out.println(setStrings); // imprime sem duplicatas
